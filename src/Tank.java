@@ -49,4 +49,5 @@ public class Tank {
     public void goBackward(int i) {
         goForward(-i);
     }
+    //fixed old version
 }
