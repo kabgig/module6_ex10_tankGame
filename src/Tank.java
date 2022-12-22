@@ -53,8 +53,4 @@ public class Tank {
         dir++;
         if (dir == 4) dir = 0;
     }
-
-    public void goBackward(int i) {
-        goForward(-i);
-    }
 }
