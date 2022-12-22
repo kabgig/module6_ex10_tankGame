@@ -5,6 +5,7 @@ public class Tank {
     private int fuel;
     static int tankNumber;
 
+
     public Tank(int x, int y, int fuel) {
         this.x = x;
         this.y = y;
@@ -21,10 +22,11 @@ public class Tank {
 
     public void goForward(int i) {
 
-        if(fuel < Math.abs(i)) {
+        if (fuel < Math.abs(i)) {
             if (i >= 0)
                 i = fuel;
-            else i = -fuel;}
+            else i = -fuel;
+        }
         if (dir == 0) x += i;
         else if (dir == 1) y += i;
         else if (dir == 2) x -= i;
@@ -33,7 +35,13 @@ public class Tank {
     }
 
     public void printPosition() {
-        System.out.println("The Tank T34-" + ++tankNumber + " is at " + x +", " + y + " now.");
+        System.out.println("The Tank T34-" + ++tankNumber + " is at " + x + ", " + y + " now.");
+    }
+
+    public void flight(int x, int y) {
+        this.x = x;
+        this.y = y;
+        System.out.println("Flight is successful");
     }
 
     public void turnLeft() {
